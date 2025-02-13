@@ -23,12 +23,6 @@ public class Car {
                 ", user='" + user + '\'' +
                 ", year=" + year +
                 '}';
-//        return "Car{" +
-//                "model='" + model + '\'' +
-//                ", series='" + series + '\'' +
-//                ", user='" + user + '\'' +
-//                ", year=" + year +
-//                '}';
     }
 
     @Override
