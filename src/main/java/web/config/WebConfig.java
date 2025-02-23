@@ -10,6 +10,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.thymeleaf.spring5.SpringTemplateEngine;
 import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.spring5.view.ThymeleafViewResolver;
+import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @Configuration
 @EnableWebMvc
@@ -41,6 +42,13 @@ public class WebConfig implements WebMvcConfigurer {
         return templateEngine;
     }
 
+    @Bean
+    public InternalResourceViewResolver viewResolver() {
+        InternalResourceViewResolver resolver = new InternalResourceViewResolver();
+        resolver.setPrefix("/WEB-INF/views/");
+        resolver.setSuffix(".html");
+        return resolver;
+    }
 
     @Override
     public void configureViewResolvers(ViewResolverRegistry registry) {
