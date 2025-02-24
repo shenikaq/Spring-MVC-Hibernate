@@ -1,9 +1,12 @@
 package web.dao;
 
 import web.model.User;
+
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+
 import org.springframework.stereotype.Repository;
+
 import java.util.List;
 
 @Repository
